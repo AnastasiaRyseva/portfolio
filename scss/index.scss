@@ -1,4 +1,4 @@
-@import url(_normalize.scss);
+@import 'normalize.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
@@ -46,6 +46,7 @@ li {
     &__decorativeArrow {
         position: absolute;
         bottom: 20px;
+        cursor: pointer;
     }
 }
 .main {
@@ -113,6 +114,7 @@ li {
     bottom: 3px;
     left: 4.5px;
     border-radius: 10px;
+    transition: 0.3s;
 
     &:hover {
         background: -webkit-linear-gradient(180deg,#23379a,#09133c); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(180deg,#23379a,#09133c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -120,12 +122,14 @@ li {
   }
   .swiper-slide__link {
     position: absolute;
-    bottom: -0.3rem;
+    bottom: 0.3rem;
     left: 4rem;
     font-size: 0.8rem;
     color: #23379a;
+    cursor: pointer;
+    text-decoration: none;
     @include respondTo (768px) {
-        bottom: 0.3rem;
+        bottom: 1rem;
         left: 6rem;
     }
 
@@ -143,13 +147,15 @@ li {
     }
   }
   .swiper-slide__link-right {
+        text-decoration: none;
         position: absolute;
-        bottom: 0.7rem;
+        bottom: 1.5rem;
         right: 4.2rem;
         font-size: 0.8rem;
         color: #23379a;
+        cursor: pointer;
         @include respondTo (768px) {
-            bottom: 0.3rem;
+            bottom: 1rem;
             right: 6rem;
         }
         &:after {
@@ -223,6 +229,15 @@ li {
     }
     li {
         margin-left: 50px;
+        padding: 5px;
+
+        svg {
+            transition: 0.3s;
+        }
+        svg:hover {
+            background: #09133c;
+            border-radius: 10px;
+        }
     }
     li:first-child {
         margin-left: 0;

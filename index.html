@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main">
         <h3 class="main__title">Портфолио</h3>
 
         <div class="swiper mySwiper">
@@ -41,8 +41,8 @@
                         </defs>
                     </svg>
                 </a>
-                <p class="swiper-slide__link">Код проекта</p>
-                <p class="swiper-slide__link-right">Посмотреть</p>
+                <a class="swiper-slide__link" href="https://github.com/AnastasiaRyseva/Fixper-site" target="_blank">Код проекта</a>
+                <a class="swiper-slide__link-right" href="https://anastasiaryseva.github.io/Fixper-site/" target="_blank">Посмотреть</a>
                 <a href="https://anastasiaryseva.github.io/Fixper-site/" target="_blank">
                     <svg class="swiper-slide__svg-right" width="50" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_406_543)">
@@ -71,8 +71,8 @@
                         </defs>
                     </svg>
                 </a>
-                <p class="swiper-slide__link">Код проекта</p>
-                <p class="swiper-slide__link-right">Посмотреть</p>
+                <a href="https://github.com/AnastasiaRyseva/CurrencyConverter" target="_blank" class="swiper-slide__link">Код проекта</a>
+                <a class="swiper-slide__link-right" href="https://anastasiaryseva.github.io/CurrencyConverter" target="_blank">Посмотреть</a>
                 <a href="https://anastasiaryseva.github.io/CurrencyConverter" target="_blank">
                     <svg class="swiper-slide__svg-right" width="50" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_406_543)">
@@ -101,8 +101,8 @@
                         </defs>
                     </svg>
                 </a>
-                <p class="swiper-slide__link">Код проекта</p>
-                <p class="swiper-slide__link-right">Посмотреть</p>
+                <a class="swiper-slide__link" href="https://github.com/AnastasiaRyseva/email" target="_blank">Код проекта</a>
+                <a class="swiper-slide__link-right" href="https://anastasiaryseva.github.io/email/" target="_blank">Посмотреть</a>
                 <a href="https://anastasiaryseva.github.io/email/" target="_blank">
                     <svg class="swiper-slide__svg-right" width="50" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_406_543)">
@@ -131,8 +131,8 @@
                         </defs>
                     </svg>
                 </a>
-                <p class="swiper-slide__link">Код проекта</p>
-                <p class="swiper-slide__link-right">Посмотреть</p>
+                <a href="https://github.com/AnastasiaRyseva/rep" class="swiper-slide__link">Код проекта</a>
+                <a href="https://anastasiaryseva.github.io/rep/" target="_blank" class="swiper-slide__link-right">Посмотреть</a>
                 <a href="https://anastasiaryseva.github.io/rep/" target="_blank">
                     <svg class="swiper-slide__svg-right" width="50" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_406_543)">
@@ -161,8 +161,8 @@
                         </defs>
                     </svg>
                 </a>
-                <p class="swiper-slide__link">Код проекта</p>
-                <p class="swiper-slide__link-right">Посмотреть</p>
+                <a href="https://github.com/AnastasiaRyseva/nft-land/" target="_blank" class="swiper-slide__link">Код проекта</a>
+                <a href="https://anastasiaryseva.github.io/nft-land/" target="_blank" class="swiper-slide__link-right">Посмотреть</a>
                 <a href="https://anastasiaryseva.github.io/nft-land/" target="_blank">
                     <svg class="swiper-slide__svg-right" width="50" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_406_543)">
@@ -220,6 +220,13 @@
             effect: "cards",
             grabCursor: true,
         });
-        </script>
+        // скролл к форме обратного звонка
+        const decorativeArrow = document.querySelector('.header__decorativeArrow');
+        const portfolio = document.getElementById('main');
+
+        decorativeArrow.addEventListener('click', () => {
+            portfolio.scrollIntoView({behavior: 'smooth', block: 'center'})
+        })
+    </script>
 </body>
 </html>

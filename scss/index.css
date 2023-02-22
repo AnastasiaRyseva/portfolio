@@ -443,7 +443,7 @@ li {
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
+  background-color: aliceblue;
 }
 
 .footer {
